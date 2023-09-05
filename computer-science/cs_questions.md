@@ -138,6 +138,23 @@
     - LRU? implement LRU in your program language! (How about multi-thread?)
     - How to migrate `Cache stampede`?
     - Quicksort(O(n^2) in worst case) vs Merge sort (O(nlogn) in worst case). Which is faster? Why? How they use these 2 sorting algorithms in real life?
+  
+7. An Inode is a data structure containing metadata about the files. Uniquely existing number for all the files in linux/unix filesystem.
+8. Zombie Process
+    - A process which has finished the execution but still has entry in the process table to report to its parent process is known as a zombie process.
+
+    How to kill Zombie Process
+    You can’t kill a zombie process because it’s already dead. It won’t respond to any signals because it’s been removed from memory—there’s nowhere to send a SIGKILL signal. You can try sending the SIGCHLD signal to the parent process, but if it didn’t work when the child process terminated, it’s unlikely to work now, either.
+    
+    The only reliable solution is to kill the parent process. When it’s terminated, its child processes are inherited by the init process, which is the first process to run in a Linux system (its process ID is 1).
+
+NOTE: Zombies Aren’t Scary … … unless they’re in a massive horde. A few aren’t anything to worry about and a simple reboot will wipe them out.
+
+9. Samba Server
+    Samba is an extremely useful networking tool for anyone who has both Windows and Unix systems on his network. Running on a Unix system, it allows Windows to share files and printers on the Unix host, and it also allows Unix users to access resources shared by Windows systems.
+    
+    Samba is a suite of Unix applications that speak the Server Message Block (SMB) protocol. Microsoft Windows operating systems and the OS/2 operating system use SMB to perform client-server networking for file and printer sharing and associated operations. By supporting this protocol, Samba enables computers running Unix to get in on the action, communicating with the same networking protocol as Microsoft Windows and appearing as another Windows system on the network from the perspective of a Windows client.
+
 
 - Good resources:
     * [Overview of OS syntax, try do dive deeper to each concept](https://medium.com/cracking-the-data-science-interview/the-10-operating-system-concepts-software-developers-need-to-remember-480d0734d710)
